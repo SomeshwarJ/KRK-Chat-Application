@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <link id="toggle" rel="stylesheet" href="dark.css" />
+  <title>Document</title>
+</head>
+
+<body id="body">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-5">
+        <div class="row no-gutters">
+          <div class="col-md-2">
+            <div class="row">
+              <nav class="menu">
+                <ul class="items" style="margin-top: 50px;">
+                  <div id="blank">
+                    <li class="item">
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                    </li>
+                  </div>
+                  <div id="commenting">
+                    <li class="item item">
+                      <i class="fa fa-commenting" aria-hidden="true"></i>
+                    </li>
+                  </div>
+                  <div id="showcontact">
+                    <li class="item">
+                      <i class="fa fa-group" aria-hidden="true"></i>
+                    </li>
+                  </div>
+                  <div id="rcalls">
+                    <li class="item">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                    </li>
+                  </div>
+                  <li class="item">
+                    <div class="night-toggle" onClick="switchMode()">
+                      <div id="sun" class="sun"></div>
+                    </div>
+                  </li>
+
+                  <li class="item">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="settings-tray" style="margin-right: 14px; border-radius: 17px; height: 50">
+              <img class="profile-image" src="communication.png" alt="Profile img" />
+              <span style="
+                    color: white;
+                    margin-left: 14px;
+                    font-weight: bold;
+                    font-size: larger;
+                  ">CHATme</span>
+              <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/filip.jpg"
+                alt="Profile img" style="margin-left: 130px;" />
+            </div>
+            <br />
+            <div class="search-box">
+              <div class="input-wrapper">
+                <i class="material-icons">search</i>
+                <input class="place" placeholder="Search here....." type="text" />
+              </div>
+            </div>
+            <br />
+
+            <div style="overflow-y: scroll; height: 350px" id="rchat">
+              <br />
+              <div class="friend-drawer friend-drawer--onhover" id="id1">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Robo Cop</h6>
+                  <p class="text-muted">Where are you coming...</p>
+                </div>
+                <button type="button" class="icon-button">
+                  <span class="material-icons">notifications</span>
+                  <span class="icon-button__badge">2</span>
+                </button>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover" id="id2">
+                <img class="profile-image"
+                  src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="" />
+                <div class="text">
+                  <h6>Optimus</h6>
+                  <p class="text-muted">Wanna grab a beer?</p>
+                </div>
+                <span class="time text-muted small">00:32</span>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image"
+                  src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/real-terminator.png" alt="" />
+                <div class="text">
+                  <h6>Skynet</h6>
+                  <p class="text-muted">Seen that canned piece of s?</p>
+                </div>
+                <button type="button" class="icon-button">
+                  <span class="material-icons">notifications</span>
+                  <span class="icon-button__badge">2</span>
+                </button>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/termy.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Termy</h6>
+                  <p class="text-muted">Im studying spanish...</p>
+                </div>
+                <button type="button" class="icon-button">
+                  <span class="material-icons">notifications</span>
+                  <span class="icon-button__badge">2</span>
+                </button>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rick.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Richard</h6>
+                  <p class="text-muted">I'm not sure...</p>
+                </div>
+                <span class="time text-muted small">13:21</span>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rachel.jpeg"
+                  alt="" />
+                <div class="text">
+                  <h6>XXXXX</h6>
+                  <p class="text-muted">Hi, wanna see something?</p>
+                </div>
+                <span class="time text-muted small">13:21</span>
+              </div>
+              <br />
+            </div>
+            <div style="overflow-y: scroll; height: 350px; display: none;" id="contacts">
+              <br />
+              <div class="friend-drawer friend-drawer--onhover" id="id1">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Robo Cop</h6>
+                  <p class="text-muted">90428 24343</p>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover" id="id2">
+                <img class="profile-image"
+                  src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="" />
+                <div class="text">
+                  <h6>Optimus</h6>
+                  <p class="text-muted">90428 24343</p>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image"
+                  src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/real-terminator.png" alt="" />
+                <div class="text">
+                  <h6>Skynet</h6>
+                  <p class="text-muted">90428 24343</p>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/termy.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Termy</h6>
+                  <p class="text-muted">90428 24343</p>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rick.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Richard</h6>
+                  <p class="text-muted">90428 24343</p>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rachel.jpeg"
+                  alt="" />
+                <div class="text">
+                  <h6>XXXXX</h6>
+                  <p class="text-muted">90428 24343</p>
+                </div>
+              </div>
+              <br />
+            </div>
+            <div style="overflow-y: scroll; height: 350px; display: none;" id="calls">
+              <br />
+              <div class="friend-drawer friend-drawer--onhover" id="id1">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Robo Cop</h6>
+                  <i class="fa fa-phone" aria-hidden="true" style="margin-left: 240px; font-size: 30px;">
+                  </i>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover" id="id2">
+                <img class="profile-image"
+                  src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="" />
+                <div class="text">
+                  <h6>Optimus</h6>
+                  <i class="fa fa-phone" aria-hidden="true" style="margin-left: 240px; font-size: 30px;">
+                  </i>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image"
+                  src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/real-terminator.png" alt="" />
+                <div class="text">
+                  <h6>Skynet</h6>
+                  <i class="fa fa-phone" aria-hidden="true" style="margin-left: 240px; font-size: 30px;">
+                  </i>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/termy.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Termy</h6>
+                  <i class="fa fa-phone" aria-hidden="true" style="margin-left: 240px; font-size: 30px;">
+                  </i>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rick.jpg"
+                  alt="" />
+                <div class="text">
+                  <h6>Richard</h6>
+                  <i class="fa fa-phone" aria-hidden="true" style="margin-left: 240px; font-size: 30px;">
+                  </i>
+                </div>
+              </div>
+              <!-- <hr /> -->
+              <br />
+              <div class="friend-drawer friend-drawer--onhover">
+                <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rachel.jpeg"
+                  alt="" />
+                <div class="text">
+                  <h6>XXXXX</h6>
+                  <i class="fa fa-phone" aria-hidden="true" style="margin-left: 240px; font-size: 30px;">
+                  </i>
+                </div>
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7" id="con1" style="display: none;">
+        <div class="friend-drawer no-gutters friend-drawer--grey" style="
+                border-radius: 5;
+                margin-bottom: 10px;
+                margin-top: 10px;
+              ">
+          <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg"
+            alt="" />
+          <div class="text">
+            <h6>Robo Cop</h6>
+            <p class="text-muted">Last seen 3:02 AM</p>
+          </div>
+          <span class="settings-tray--right">
+            <i class="material-icons">menu</i>
+          </span>
+        </div>
+
+        <div style="overflow-y: scroll; overflow-x: hidden; height: 360px">
+          <div class="chat-panel">
+            <div class="received-chats">
+              <br />
+              <div class="received-msg">
+                <div class="received-msg-inbox">
+                  <p>
+                    Hi !! This is message from Robo Cop from IT department.
+                  </p>
+                  <span class="time">18:06 PM | July 24 </span>
+                </div>
+              </div>
+            </div>
+            <div class="outgoing-chats">
+              <div class="outgoing-chats-img"></div>
+
+              <div class="outgoing-msg">
+                <div class="outgoing-chats-msg">
+                  <p class="multi-msg">
+                    hey hi. This is Jason from CSE department, Brown tag
+                  </p>
+                  <p class="multi-msg">
+                    Where are you coming from? and what is purpose of coming to this college?
+                  </p>
+
+                  <span class="times">18:30 PM | July 24 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7" id="con2" style="display: none;">
+        <div class="friend-drawer no-gutters friend-drawer--grey" style="
+                border-radius: 5;
+                margin-bottom: 10px;
+                margin-top: 10px;
+              ">
+          <img class="profile-image"
+            src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="" />
+          <div class="text">
+            <h6>Optimus</h6>
+            <p class="text-muted">Last seen 3:02 AM</p>
+          </div>
+          <span class="settings-tray--right">
+            <i class="material-icons">menu</i>
+          </span>
+        </div>
+
+        <div style="overflow-y: scroll; overflow-x: hidden; height: 360px">
+          <div class="chat-panel">
+            <div class="received-chats">
+              <div class="received-chats-img"></div>
+              <br />
+              <div class="received-msg">
+                <div class="received-msg-inbox">
+                  <p>
+                    Hie Jason.. Can you send me the last DSA class notes now?
+                  </p>
+                  <span class="time">18:06 PM | July 24 </span>
+                </div>
+              </div>
+            </div>
+            <div class="outgoing-chats">
+              <div class="outgoing-chats-img"></div>
+
+              <div class="outgoing-msg">
+                <div class="outgoing-chats-msg">
+                  <p class="multi-msg">
+                    Hey hi Optimus!
+                    Yeah, sure I'll. what are you doing now?
+                  </p>
+                  <p class="multi-msg">
+                    I am going to play in the ground with our friends. Will you join with us?
+                  </p>
+
+                  <span class="times">18:30 PM | July 24 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7" id="design">
+        <div class="text-container">
+          <h1>CHATme</h1>
+        </div>
+
+      </div>
+      <div class="row" id="typing" style="display: none;">
+        <div class="col-12">
+          <div class="chat-box-tray">
+            <i class="material-icons" onclick="toggleEmojiDrawer()">sentiment_very_satisfied</i>
+
+            <div id="drawer" class="emoji-drawer hidden">
+              <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
+              <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
+              <div class="emoji" onclick="addEmoji(this.innerHTML)">😄</div>
+              <div class="emoji" onclick="addEmoji(this.innerHTML)">😁</div>
+              <div class="emoji" onclick="addEmoji(this.innerHTML)">😆</div>
+            </div>
+
+            <input class="placer" type="text" placeholder="Type your message here..." />
+            <i class="material-icons">mic</i>
+            <i class="material-icons">send</i>
+          </div>
+        </div>
+      </div>
+      <div id="con3" style="display: none;">
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+  function switchMode() {
+    let moon = document.getElementById("sun");
+    if (moon.className == "sun") {
+      moon.className = "moon";
+      document.getElementById("toggle").href = "light.css";
+    } else {
+      moon.className = "sun";
+      document.getElementById("toggle").href = "dark.css";
+    }
+  }
+  function addEmoji(emoji) {
+    let inputEle = document.getElementById("input");
+
+    input.value += emoji;
+  }
+
+  function toggleEmojiDrawer() {
+    let drawer = document.getElementById("drawer");
+
+    if (drawer.classList.contains("hidden")) {
+      drawer.classList.remove("hidden");
+    } else {
+      drawer.classList.add("hidden");
+    }
+  }
+
+  $(document).ready(function () {
+    $('#rcalls').click(function () {
+      $('#calls').toggle(500);
+      // $('#con2').fadeOut(500);
+      $('#calls').fadeIn(1000);
+      $('#calls').slideDown(1000);
+      $("#contacts").hide();
+      $("#con1").hide();
+      $("#con2").hide();
+      $('#typing').hide();
+      $("#rchat").hide();
+    })
+    $('#commenting').click(function () {
+      $('#rchat').toggle(500);
+      // $('#con2').fadeOut(500);
+      $('#rchat').fadeIn(1000);
+      $('#rchat').slideDown(1000);
+      $("#contacts").hide();
+      $("#calls").hide();
+      $("#con1").hide();
+      $("#con2").hide();
+      $('#typing').hide();
+      $("#rchat").hide();
+    })
+    $('#showcontact').click(function () {
+      $('#contacts').toggle(500);
+      // $('#con2').fadeOut(500);
+      $('#contacts').fadeIn(1000);
+      $('#contacts').slideDown(1000);
+      $("#con1").hide();
+      $("#con2").hide();
+      $('#typing').hide();
+      $("#rchat").hide();
+      $("#calls").hide();
+    })
+    $('#blank').click(function () {
+      $('#design').toggle(500);
+      // $('#con2').fadeOut(500);
+      $('#design').fadeIn(1000);
+      $('#design').slideDown(1000);
+      $("#con1").hide();
+      $("#con2").hide();
+      $('#typing').hide();
+      return;
+    })
+    $("#id2").click(function () {
+      $('#con2').toggle(500);
+      // $('#con2').fadeOut(500);
+      $('#con2').fadeIn(1000);
+      $('#typing').fadeIn(1000);
+      $('#con2').slideDown(1000);
+      $("#con1").hide();
+      $("#design").hide();
+      return;
+    });
+    $("#id1").click(function () {
+      $('#con1').toggle(500);
+      // $('#con1').fadeOut(500);
+      $('#con1').fadeIn(1000);
+      $('#typing').fadeIn(1000);
+      $('#con1').slideDown(1000);
+      $("#con2").hide();
+      $("#design").hide();
+      return;
+    });
+  });
+</script>
+
+</html>
